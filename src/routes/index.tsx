@@ -421,6 +421,32 @@ function Index() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section id="faq" className="px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-12 text-center">
+            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Everything you need to know about getting started with Iskra Exchange.
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="font-heading text-lg font-semibold text-foreground hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base leading-relaxed text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-primary px-8 py-16 text-center sm:px-16 sm:py-24">
