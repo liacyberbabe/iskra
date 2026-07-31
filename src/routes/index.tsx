@@ -123,7 +123,7 @@ function Index() {
             </div>
             <h1 className="mt-6 font-heading text-5xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               The operating system for{" "}
-              <span className="text-primary">modern B2B teams</span>.
+              <span className="text-accent">modern B2B teams</span>.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
               Iskra Exchange unifies your data, workflows, and customer touchpoints
