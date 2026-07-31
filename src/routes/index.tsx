@@ -156,8 +156,8 @@ function Index() {
               alt="Abstract clay and sandstone shapes representing fluid B2B operations"
               width={1344}
               height={896}
+              loading="eager"
               className="relative rounded-2xl shadow-2xl"
-              priority={true}
             />
           </div>
         </div>
