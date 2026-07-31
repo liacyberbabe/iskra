@@ -9,6 +9,13 @@ import {
   Zap,
 } from "lucide-react";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import heroImage from "../assets/iskra-hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -118,6 +125,49 @@ const plans = [
     ],
     cta: "Talk to sales",
     featured: false,
+  },
+];
+
+const faqs = [
+  {
+    question: "What is Iskra Exchange?",
+    answer:
+      "Iskra Exchange is a B2B SaaS platform that unifies your data, workflows, and customer touchpoints into one elegant system — built to help modern teams operate with clarity and scale with confidence.",
+  },
+  {
+    question: "How does the free trial work?",
+    answer:
+      "Every plan starts with a 14-day free trial. No credit card is required to sign up, and you get full access to the features included in your chosen tier.",
+  },
+  {
+    question: "Can I change my plan later?",
+    answer:
+      "Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect on your next billing cycle.",
+  },
+  {
+    question: "Is my data secure?",
+    answer:
+      "Security is built into every layer of Iskra Exchange. We use enterprise-grade encryption, role-based access controls, and regular compliance audits to keep your information safe.",
+  },
+  {
+    question: "Do you offer custom integrations?",
+    answer:
+      "Yes. The Professional plan includes custom integrations, and Enterprise customers receive dedicated engineering support for building bespoke connectors.",
+  },
+  {
+    question: "What kind of support do you provide?",
+    answer:
+      "Starter plans include email support, Professional adds priority chat, and Enterprise customers get a dedicated success manager plus SLA-backed response times.",
+  },
+  {
+    question: "Can I invite team members?",
+    answer:
+      "Yes. Each plan includes a set number of seats, and you can add more anytime. Enterprise plans offer unlimited team members and SSO provisioning.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Click any 'Start free trial' button, create your workspace, and follow the onboarding guide. Most teams are up and running within minutes.",
   },
 ];
 
@@ -368,6 +418,32 @@ function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-12 text-center">
+            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Everything you need to know about getting started with Iskra Exchange.
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="font-heading text-lg font-semibold text-foreground hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base leading-relaxed text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
