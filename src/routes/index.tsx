@@ -9,6 +9,13 @@ import {
   Zap,
 } from "lucide-react";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import heroImage from "../assets/iskra-hero.jpg";
 
 export const Route = createFileRoute("/")({
