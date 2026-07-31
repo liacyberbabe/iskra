@@ -128,6 +128,49 @@ const plans = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What is Iskra Exchange?",
+    answer:
+      "Iskra Exchange is a B2B SaaS platform that unifies your data, workflows, and customer touchpoints into one elegant system — built to help modern teams operate with clarity and scale with confidence.",
+  },
+  {
+    question: "How does the free trial work?",
+    answer:
+      "Every plan starts with a 14-day free trial. No credit card is required to sign up, and you get full access to the features included in your chosen tier.",
+  },
+  {
+    question: "Can I change my plan later?",
+    answer:
+      "Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect on your next billing cycle.",
+  },
+  {
+    question: "Is my data secure?",
+    answer:
+      "Security is built into every layer of Iskra Exchange. We use enterprise-grade encryption, role-based access controls, and regular compliance audits to keep your information safe.",
+  },
+  {
+    question: "Do you offer custom integrations?",
+    answer:
+      "Yes. The Professional plan includes custom integrations, and Enterprise customers receive dedicated engineering support for building bespoke connectors.",
+  },
+  {
+    question: "What kind of support do you provide?",
+    answer:
+      "Starter plans include email support, Professional adds priority chat, and Enterprise customers get a dedicated success manager plus SLA-backed response times.",
+  },
+  {
+    question: "Can I invite team members?",
+    answer:
+      "Yes. Each plan includes a set number of seats, and you can add more anytime. Enterprise plans offer unlimited team members and SSO provisioning.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Click any 'Start free trial' button, create your workspace, and follow the onboarding guide. Most teams are up and running within minutes.",
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
