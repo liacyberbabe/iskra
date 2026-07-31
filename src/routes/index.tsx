@@ -71,6 +71,56 @@ const testimonials = [
   { name: "Sage", role: "VP Product, Cove" },
 ];
 
+const plans = [
+  {
+    name: "Starter",
+    price: "$29",
+    period: "/month",
+    description: "Perfect for small teams getting started.",
+    features: [
+      "Up to 5 team members",
+      "Core workflow automation",
+      "Standard analytics dashboard",
+      "Email support",
+      "1GB storage",
+    ],
+    cta: "Start free trial",
+    featured: false,
+  },
+  {
+    name: "Professional",
+    price: "$99",
+    period: "/month",
+    description: "For growing teams that need more power.",
+    features: [
+      "Up to 25 team members",
+      "Advanced workflow builder",
+      "Real-time insights & alerts",
+      "Priority chat support",
+      "50GB storage",
+      "Custom integrations",
+    ],
+    cta: "Start free trial",
+    featured: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "Tailored solutions for large organizations.",
+    features: [
+      "Unlimited team members",
+      "Dedicated success manager",
+      "Advanced security & compliance",
+      "SSO & SCIM provisioning",
+      "Unlimited storage",
+      "Custom contracts & SLA",
+    ],
+    cta: "Talk to sales",
+    featured: false,
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
