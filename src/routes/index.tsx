@@ -247,6 +247,98 @@ function Index() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section id="pricing" className="px-6 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Simple, transparent pricing
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Choose the plan that fits your team. Scale up or down anytime.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative flex flex-col rounded-2xl border p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg ${
+                  plan.featured
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-border bg-card text-card-foreground"
+                }`}
+              >
+                {plan.featured && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                    Most popular
+                  </span>
+                )}
+                <h3 className="font-heading text-2xl font-semibold">
+                  {plan.name}
+                </h3>
+                <div className="mt-4 flex items-baseline gap-1">
+                  <span className="font-heading text-5xl font-semibold">
+                    {plan.price}
+                  </span>
+                  <span
+                    className={`text-lg ${
+                      plan.featured
+                        ? "text-primary-foreground/70"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {plan.period}
+                  </span>
+                </div>
+                <p
+                  className={`mt-2 ${
+                    plan.featured
+                      ? "text-primary-foreground/80"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {plan.description}
+                </p>
+                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <Check
+                        className={`mt-0.5 h-5 w-5 shrink-0 ${
+                          plan.featured
+                            ? "text-primary-foreground"
+                            : "text-primary"
+                        }`}
+                      />
+                      <span
+                        className={
+                          plan.featured
+                            ? "text-primary-foreground/90"
+                            : "text-foreground"
+                        }
+                      >
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-all ${
+                    plan.featured
+                      ? "bg-background text-foreground shadow-md hover:bg-background/90"
+                      : "bg-primary text-primary-foreground hover:bg-primary/90"
+                  }`}
+                >
+                  {plan.cta}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Social Proof */}
       <section className="border-y border-border bg-card px-6 py-16">
         <div className="mx-auto max-w-7xl text-center">
