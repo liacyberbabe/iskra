@@ -437,24 +437,24 @@ function Index() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-[2rem] border p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl ${
+                className={`relative flex flex-col rounded-[2rem] border p-6 shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl sm:p-8 ${
                   plan.featured
-                    ? "border-primary/40 bg-primary/25 text-primary-foreground shadow-primary/10 backdrop-blur-3xl"
-                    : "border-border/60 bg-background/40 text-card-foreground backdrop-blur-3xl"
+                    ? "border-primary/50 bg-primary/35 text-primary-foreground shadow-primary/15 backdrop-blur-3xl"
+                    : "border-border/70 bg-background/60 text-card-foreground shadow-black/5 backdrop-blur-3xl"
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-accent/40 bg-accent/90 px-3 py-1 text-xs font-medium text-accent-foreground shadow-sm backdrop-blur-md">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-accent/40 bg-accent/95 px-3 py-1 text-xs font-medium text-accent-foreground shadow-sm backdrop-blur-md">
                     Most popular
                   </span>
                 )}
-                <h3 className="font-heading text-2xl text-foreground">{plan.name}</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="font-heading text-5xl text-foreground">{plan.price}</span>
+                <h3 className="font-heading text-xl text-foreground sm:text-2xl">{plan.name}</h3>
+                <div className="mt-3 flex items-baseline gap-1 sm:mt-4">
+                  <span className="font-heading text-4xl text-foreground sm:text-5xl">{plan.price}</span>
                   <span
-                    className={`text-lg ${
+                    className={`text-base sm:text-lg ${
                       plan.featured
-                        ? "text-foreground/70"
+                        ? "text-foreground/75"
                         : "text-muted-foreground"
                     }`}
                   >
@@ -462,15 +462,15 @@ function Index() {
                   </span>
                 </div>
                 <p
-                  className={`mt-2 text-sm ${
+                  className={`mt-2 text-sm leading-relaxed ${
                     plan.featured
-                      ? "text-foreground/80"
+                      ? "text-foreground/85"
                       : "text-muted-foreground"
                   }`}
                 >
                   {plan.description}
                 </p>
-                <ul className="mt-6 flex flex-1 flex-col gap-3">
+                <ul className="mt-5 flex flex-1 flex-col gap-2.5 sm:mt-6 sm:gap-3">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm">
                       <Check
@@ -481,8 +481,8 @@ function Index() {
                       <span
                         className={
                           plan.featured
-                            ? "text-foreground/90"
-                            : "text-foreground"
+                            ? "text-foreground/95"
+                            : "text-foreground/95"
                         }
                       >
                         {feature}
@@ -492,7 +492,7 @@ function Index() {
                 </ul>
                 <a
                   href="#contact"
-                  className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium transition-all ${
+                  className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all sm:mt-8 sm:px-6 sm:py-3 sm:text-base ${
                     plan.featured
                       ? "bg-background text-foreground shadow-md hover:bg-background/90"
                       : "bg-primary text-primary-foreground hover:bg-primary/90"
