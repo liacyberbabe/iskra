@@ -263,9 +263,9 @@ function Index() {
             </div>
             <h1 className="mt-7 font-heading text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Software that feels{" "}
-              <em className="not-italic font-medium text-primary italic">beautiful</em>{" "}
+              <em className="italic font-medium text-primary">beautiful</em>{" "}
               and works{" "}
-              <em className="not-italic font-medium text-accent italic">brilliantly.</em>
+              <em className="italic font-medium text-accent">brilliantly.</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Iskra Exchange unifies your data, workflows, and customer touchpoints
@@ -371,7 +371,7 @@ function Index() {
             </p>
             <h2 className="mt-4 font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
               Everything you need,{" "}
-              <em className="not-italic italic text-primary">nothing you don&apos;t</em>
+              <em className="italic text-primary">nothing you don&apos;t</em>
             </h2>
           </div>
 
@@ -426,7 +426,7 @@ function Index() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
               Simple,{" "}
-              <em className="not-italic italic text-primary">transparent</em> pricing
+              <em className="italic text-primary">transparent</em> pricing
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Choose the plan that fits your team. Scale up or down anytime.
@@ -529,7 +529,7 @@ function Index() {
           <div className="mb-10 text-center">
             <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
               Frequently asked{" "}
-              <em className="not-italic italic text-primary">questions</em>
+              <em className="italic text-primary">questions</em>
             </h2>
           </div>
           <Accordion type="single" collapsible className="w-full">
@@ -552,7 +552,7 @@ function Index() {
         <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-border bg-card px-8 py-16 text-center shadow-lg sm:px-16">
           <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
             Let&apos;s create something{" "}
-            <em className="not-italic italic text-primary">beautiful</em> together
+            <em className="italic text-primary">beautiful</em> together
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
             Have a project in mind, or just want to say hello? We&apos;d love to
