@@ -257,20 +257,21 @@ function Index() {
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card/70 px-4 py-1.5 backdrop-blur">
               <Sparkle className="h-3.5 w-3.5 text-primary" />
-              Now welcoming teams of every size
+              <span className="eyebrow">Iskra Exchange</span>
             </div>
-            <h1 className="mt-7 font-heading text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              Software that feels{" "}
-              <em className="italic font-medium text-primary">beautiful</em>{" "}
-              and works{" "}
-              <em className="italic font-medium text-accent">brilliantly.</em>
+            <h1 className="mt-7 font-heading text-5xl font-light leading-[1.02] tracking-[-0.01em] text-foreground sm:text-6xl lg:text-7xl">
+              Embrace your{" "}
+              <em className="italic font-normal text-iridescent">vision</em>
+              <br className="hidden sm:block" /> with software that feels{" "}
+              <em className="italic font-normal text-primary">effortless.</em>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Iskra Exchange unifies your data, workflows, and customer touchpoints
               into one beautifully calm platform — strategic, soulful, and built to scale.
             </p>
+
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contact"

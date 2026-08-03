@@ -20,7 +20,11 @@
 
 @theme inline {
   --font-sans: "Karla", sans-serif;
-  --font-heading: "Ramabhadra", sans-serif;
+  --font-heading: "Cormorant", "Times New Roman", serif;
+  --color-iris: var(--iris);
+  --color-ice: var(--ice);
+  --color-blush: var(--blush);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -65,7 +69,18 @@
 
 :root {
   --radius: 1.25rem;
-  --background: oklch(0.985 0.007 340);
+  --background: oklch(0.988 0.008 330);
+  --iris: oklch(0.780 0.085 295);
+  --ice: oklch(0.880 0.055 235);
+  --blush: oklch(0.900 0.055 15);
+  --gradient-iridescent: linear-gradient(
+    115deg,
+    oklch(0.930 0.060 25) 0%,
+    oklch(0.930 0.050 340) 28%,
+    oklch(0.910 0.060 300) 58%,
+    oklch(0.920 0.050 235) 100%
+  );
+
   --foreground: oklch(0.275 0.030 320);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.275 0.030 320);
@@ -102,6 +117,9 @@
 
 .dark {
   --background: oklch(0.259 0.024 10.0);
+  --iris: oklch(0.700 0.080 295);
+  --ice: oklch(0.760 0.050 235);
+  --blush: oklch(0.780 0.055 15);
   --foreground: oklch(0.976 0.008 61.5);
   --card: oklch(0.320 0.030 12.0);
   --card-foreground: oklch(0.976 0.008 61.5);
@@ -158,5 +176,25 @@
   h5,
   h6 {
     font-family: var(--font-heading);
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
+}
+
+@utility text-iridescent {
+  background-image: var(--gradient-iridescent);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-iridescent {
+  background-image: var(--gradient-iridescent);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
 }
