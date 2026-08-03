@@ -437,24 +437,24 @@ function Index() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-[2rem] border p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl ${
+                className={`relative flex flex-col rounded-[2rem] border p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl ${
                   plan.featured
-                    ? "border-primary/40 bg-primary text-primary-foreground shadow-primary/20"
-                    : "border-border bg-card text-card-foreground"
+                    ? "border-primary/40 bg-primary/25 text-primary-foreground shadow-primary/10 backdrop-blur-3xl"
+                    : "border-border/60 bg-background/40 text-card-foreground backdrop-blur-3xl"
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-accent/40 bg-accent/90 px-3 py-1 text-xs font-medium text-accent-foreground shadow-sm backdrop-blur-md">
                     Most popular
                   </span>
                 )}
-                <h3 className="font-heading text-2xl">{plan.name}</h3>
+                <h3 className="font-heading text-2xl text-foreground">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="font-heading text-5xl">{plan.price}</span>
+                  <span className="font-heading text-5xl text-foreground">{plan.price}</span>
                   <span
                     className={`text-lg ${
                       plan.featured
-                        ? "text-primary-foreground/70"
+                        ? "text-foreground/70"
                         : "text-muted-foreground"
                     }`}
                   >
@@ -464,7 +464,7 @@ function Index() {
                 <p
                   className={`mt-2 text-sm ${
                     plan.featured
-                      ? "text-primary-foreground/80"
+                      ? "text-foreground/80"
                       : "text-muted-foreground"
                   }`}
                 >
@@ -475,13 +475,13 @@ function Index() {
                     <li key={feature} className="flex items-start gap-3 text-sm">
                       <Check
                         className={`mt-0.5 h-4 w-4 shrink-0 ${
-                          plan.featured ? "text-primary-foreground" : "text-primary"
+                          plan.featured ? "text-foreground" : "text-primary"
                         }`}
                       />
                       <span
                         className={
                           plan.featured
-                            ? "text-primary-foreground/90"
+                            ? "text-foreground/90"
                             : "text-foreground"
                         }
                       >
