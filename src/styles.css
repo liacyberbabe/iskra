@@ -175,3 +175,21 @@
     font-family: var(--font-heading);
   }
 }
+
+@utility text-iridescent {
+  background-image: var(--gradient-iridescent);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-iridescent {
+  background-image: var(--gradient-iridescent);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
