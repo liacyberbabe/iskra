@@ -294,32 +294,32 @@ function Index() {
             </p>
           </div>
 
-          <div className="relative">
-            <div
-              aria-hidden
-              className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-primary/25 via-accent/20 to-transparent blur-3xl"
-            />
+          <div className="relative min-h-[26rem] overflow-hidden rounded-[2.5rem] sm:min-h-[32rem] lg:min-h-[28rem]">
             <img
               src={heroImage}
               alt="Soft iridescent pastel ribbons and glass spheres representing fluid operations"
               width={1344}
               height={1008}
               loading="eager"
-              className="relative aspect-4/3 w-full rounded-[2.5rem] object-cover shadow-2xl shadow-primary/20"
+              className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="relative -mt-16 ml-4 mr-4 rounded-[1.75rem] border border-border/70 bg-card/80 p-5 shadow-xl backdrop-blur-xl sm:ml-8 sm:mr-10">
-              <p className="font-heading text-xl text-foreground">
-                Explore our services
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {services.map((service) => (
-                  <span
-                    key={service}
-                    className="rounded-full bg-secondary px-3.5 py-1.5 text-sm text-secondary-foreground"
-                  >
-                    {service}
-                  </span>
-                ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/20 to-background/40" />
+
+            <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
+              <div className="max-w-sm rounded-[1.75rem] border border-border/40 bg-background/25 p-6 shadow-2xl backdrop-blur-2xl">
+                <p className="font-heading text-xl text-foreground">
+                  Explore our services
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {services.map((service) => (
+                    <span
+                      key={service}
+                      className="rounded-full bg-secondary/80 px-3.5 py-1.5 text-sm text-secondary-foreground backdrop-blur-sm"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
