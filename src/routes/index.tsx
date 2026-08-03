@@ -218,7 +218,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:flex md:justify-between">
           <Link to="/" className="flex min-w-0 items-center gap-2">
             <Sparkles className="h-5 w-5 shrink-0 text-primary" />
-            <span className="truncate font-heading text-[0.5rem] uppercase tracking-[0.15em] text-foreground">
+            <span className="truncate font-heading text-[0.7rem] uppercase tracking-[0.15em] text-foreground">
               Iskra Exchange
             </span>
           </Link>
