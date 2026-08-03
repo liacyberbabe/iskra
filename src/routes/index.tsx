@@ -492,10 +492,10 @@ function Index() {
                 </ul>
                 <a
                   href="#contact"
-                  className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all sm:mt-8 sm:px-6 sm:py-3 sm:text-base ${
+                  className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium shadow-md transition-all sm:mt-8 sm:px-6 sm:py-3 sm:text-base ${
                     plan.featured
-                      ? "bg-background text-foreground shadow-md hover:bg-background/90"
-                      : "bg-primary text-primary-foreground hover:bg-primary/90"
+                      ? "border-primary-foreground/40 bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                      : "border-primary/40 bg-primary text-primary-foreground hover:bg-primary/90"
                   }`}
                 >
                   {plan.cta}
