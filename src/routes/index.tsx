@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  ArrowUpRight,
   BarChart3,
   Check,
   Layers,
   Shield,
+  Sparkle,
   Sparkles,
-  Zap,
 } from "lucide-react";
 
 import {
@@ -22,23 +23,23 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Iskra Exchange — B2B SaaS for Modern Teams" },
+      { title: "Iskra Exchange — Software That Feels Effortless" },
       {
         name: "description",
         content:
-          "Iskra Exchange helps businesses streamline operations, unify data, and scale with confidence.",
+          "Iskra Exchange unifies your data, workflows, and customer touchpoints into one beautifully calm platform built for modern B2B teams.",
       },
-      { property: "og:title", content: "Iskra Exchange — B2B SaaS for Modern Teams" },
+      {
+        property: "og:title",
+        content: "Iskra Exchange — Software That Feels Effortless",
+      },
       {
         property: "og:description",
         content:
-          "Iskra Exchange helps businesses streamline operations, unify data, and scale with confidence.",
+          "Iskra Exchange unifies your data, workflows, and customer touchpoints into one beautifully calm platform built for modern B2B teams.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { property: "og:image", content: heroImage },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroImage },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -46,9 +47,17 @@ export const Route = createFileRoute("/")({
 
 const navLinks = [
   { label: "Product", href: "#features" },
-  { label: "Solutions", href: "#solutions" },
+  { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
+  { label: "FAQ", href: "#faq" },
+];
+
+const featuredIn = ["Creativeboom", "The Design Journal", "Muzli", "Squarespace", "She Designs"];
+
+const stats = [
+  { value: "45+", label: "Successful launches" },
+  { value: "1.65M", label: "Happy end users" },
+  { value: "12K", label: "Satisfied clients" },
 ];
 
 const features = [
@@ -56,26 +65,56 @@ const features = [
     icon: Layers,
     title: "Unified Operations",
     description:
-      "Connect every workflow into one coherent system. Reduce friction and keep teams aligned from day one.",
+      "Connect every workflow into one coherent system, so nothing gets lost between teams.",
   },
   {
     icon: BarChart3,
     title: "Real-Time Insights",
     description:
-      "Make decisions with live data. Dashboards and alerts surface what matters before it becomes a problem.",
+      "Live dashboards and gentle alerts surface what matters before it becomes a problem.",
   },
   {
     icon: Shield,
-    title: "Enterprise-Grade Security",
+    title: "Quiet Security",
     description:
-      "Built-in compliance, access controls, and encryption so you can scale without sleepless nights.",
+      "Compliance, access controls, and encryption handled in the background — always.",
+  },
+  {
+    icon: Sparkle,
+    title: "Designed With Care",
+    description:
+      "An interface your team actually enjoys opening, crafted down to the last detail.",
   },
 ];
 
-const testimonials = [
-  { name: "Aurora", role: "Operations Lead, Fable" },
-  { name: "Mira", role: "CTO, Northwind" },
-  { name: "Sage", role: "VP Product, Cove" },
+const services = [
+  "Consulting",
+  "Support & Maintenance",
+  "Development",
+  "Implementation",
+];
+
+const process = [
+  {
+    step: "01",
+    title: "Discover",
+    description: "We learn your goals, your data, and the way your team really works.",
+  },
+  {
+    step: "02",
+    title: "Plan",
+    description: "A tailored rollout strategy with clear milestones and no surprises.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    description: "We bring your workspace to life with intention and craftsmanship.",
+  },
+  {
+    step: "04",
+    title: "Launch",
+    description: "We go live together and celebrate your new operating system.",
+  },
 ];
 
 const plans = [
@@ -175,120 +214,180 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <Sparkles className="h-6 w-6 text-primary" />
-            <span className="font-heading text-2xl font-semibold tracking-tight text-foreground">
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:flex md:justify-between">
+          <Link to="/" className="flex min-w-0 items-center gap-2">
+            <Sparkles className="h-5 w-5 shrink-0 text-primary" />
+            <span className="truncate font-heading text-2xl font-semibold tracking-tight text-foreground">
               Iskra Exchange
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-9 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline"
-            >
-              Log in
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
-            >
-              Get started
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90"
+          >
+            Let&apos;s work together
+          </a>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-6 pt-16 pb-24 sm:pt-20 sm:pb-32 lg:pt-28 lg:pb-40">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
-              <Zap className="h-4 w-4 text-accent" />
-              Now available for teams of all sizes
+      <section className="relative overflow-hidden px-6 pt-14 pb-20 sm:pt-20 sm:pb-28">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-40 -left-32 h-[34rem] w-[34rem] rounded-full bg-primary/20 blur-[120px]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 right-0 h-[26rem] w-[26rem] rounded-full bg-accent/25 blur-[120px]"
+        />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur">
+              <Sparkle className="h-3.5 w-3.5 text-primary" />
+              Now welcoming teams of every size
             </div>
-            <h1 className="mt-6 font-heading text-5xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              The operating system for{" "}
-              <span className="text-accent">modern B2B teams</span>.
+            <h1 className="mt-7 font-heading text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              Software that feels{" "}
+              <em className="italic font-medium text-primary">beautiful</em>{" "}
+              and works{" "}
+              <em className="italic font-medium text-accent">brilliantly.</em>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Iskra Exchange unifies your data, workflows, and customer touchpoints
-              into one elegant platform. Built for scale, designed for clarity.
+              into one beautifully calm platform — strategic, soulful, and built to scale.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
               >
                 Start free trial
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#demo"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-base font-semibold text-foreground transition-all hover:bg-accent/10"
+                href="#features"
+                className="inline-flex items-center gap-2 text-base font-medium text-foreground transition-colors hover:text-primary"
               >
-                Watch demo
+                See how it works
+                <span className="grid h-8 w-8 place-items-center rounded-full border border-border">
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
               </a>
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-5 text-sm text-muted-foreground">
               No credit card required. 14-day free trial.
             </p>
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent/20 to-primary/10 blur-2xl" />
+            <div
+              aria-hidden
+              className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-primary/25 via-accent/20 to-transparent blur-3xl"
+            />
             <img
               src={heroImage}
-              alt="Abstract clay and sandstone shapes representing fluid B2B operations"
+              alt="Soft iridescent pastel ribbons and glass spheres representing fluid operations"
               width={1344}
-              height={896}
+              height={1008}
               loading="eager"
-              className="relative rounded-2xl shadow-2xl"
+              className="relative aspect-4/3 w-full rounded-[2.5rem] object-cover shadow-2xl shadow-primary/20"
             />
+            <div className="relative -mt-16 ml-4 mr-4 rounded-[1.75rem] border border-border/70 bg-card/80 p-5 shadow-xl backdrop-blur-xl sm:ml-8 sm:mr-10">
+              <p className="font-heading text-xl text-foreground">
+                Explore our services
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {services.map((service) => (
+                  <span
+                    key={service}
+                    className="rounded-full bg-secondary px-3.5 py-1.5 text-sm text-secondary-foreground"
+                  >
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Feature Grid */}
-      <section id="features" className="px-6 py-20 sm:py-28">
+      {/* Featured in */}
+      <section className="border-y border-border bg-card/60 px-6 py-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Featured in
+          </span>
+          {featuredIn.map((name) => (
+            <span
+              key={name}
+              className="font-heading text-lg text-foreground/70"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="px-6 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-3">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-[2rem] border border-border bg-card p-8 text-center shadow-sm"
+            >
+              <p className="font-heading text-5xl text-primary sm:text-6xl">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Everything you need to move faster
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Three core capabilities that transform how your business runs.
+            <p className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-primary">
+              <Sparkle className="h-3.5 w-3.5" /> How we help
             </p>
+            <h2 className="mt-4 font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+              Everything you need,{" "}
+              <em className="italic text-primary">nothing you don&apos;t</em>
+            </h2>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="group rounded-2xl border border-border bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="rounded-[2rem] border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
               >
-                <div className="inline-flex rounded-xl bg-accent/10 p-3">
-                  <feature.icon className="h-6 w-6 text-primary" />
+                <div className="inline-flex rounded-2xl bg-secondary p-3">
+                  <feature.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="mt-6 font-heading text-2xl font-semibold text-foreground">
+                <h3 className="mt-6 font-heading text-2xl text-foreground">
                   {feature.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {feature.description}
                 </p>
               </div>
@@ -297,40 +396,61 @@ function Index() {
         </div>
       </section>
 
+      {/* Process */}
+      <section id="process" className="px-6 pb-20 sm:pb-28">
+        <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-secondary/60 px-6 py-14 sm:px-12">
+          <h2 className="text-center font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+            The process
+          </h2>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((item) => (
+              <div key={item.step} className="text-center">
+                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-primary/40 bg-background font-heading text-lg text-primary">
+                  {item.step}
+                </span>
+                <h3 className="mt-5 font-heading text-2xl text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
-      <section id="pricing" className="px-6 py-20 sm:py-28">
+      <section id="pricing" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Simple, transparent pricing
+            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+              Simple,{" "}
+              <em className="italic text-primary">transparent</em> pricing
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Choose the plan that fits your team. Scale up or down anytime.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-2xl border p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg ${
+                className={`relative flex flex-col rounded-[2rem] border p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl ${
                   plan.featured
-                    ? "border-primary bg-primary text-primary-foreground"
+                    ? "border-primary/40 bg-primary text-primary-foreground shadow-primary/20"
                     : "border-border bg-card text-card-foreground"
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
                     Most popular
                   </span>
                 )}
-                <h3 className="font-heading text-2xl font-semibold">
-                  {plan.name}
-                </h3>
+                <h3 className="font-heading text-2xl">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="font-heading text-5xl font-semibold">
-                    {plan.price}
-                  </span>
+                  <span className="font-heading text-5xl">{plan.price}</span>
                   <span
                     className={`text-lg ${
                       plan.featured
@@ -342,7 +462,7 @@ function Index() {
                   </span>
                 </div>
                 <p
-                  className={`mt-2 ${
+                  className={`mt-2 text-sm ${
                     plan.featured
                       ? "text-primary-foreground/80"
                       : "text-muted-foreground"
@@ -352,12 +472,10 @@ function Index() {
                 </p>
                 <ul className="mt-6 flex flex-1 flex-col gap-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
+                    <li key={feature} className="flex items-start gap-3 text-sm">
                       <Check
-                        className={`mt-0.5 h-5 w-5 shrink-0 ${
-                          plan.featured
-                            ? "text-primary-foreground"
-                            : "text-primary"
+                        className={`mt-0.5 h-4 w-4 shrink-0 ${
+                          plan.featured ? "text-primary-foreground" : "text-primary"
                         }`}
                       />
                       <span
@@ -374,7 +492,7 @@ function Index() {
                 </ul>
                 <a
                   href="#contact"
-                  className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-all ${
+                  className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium transition-all ${
                     plan.featured
                       ? "bg-background text-foreground shadow-md hover:bg-background/90"
                       : "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -389,53 +507,35 @@ function Index() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="border-y border-border bg-card px-6 py-16">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-            Trusted by forward-thinking teams
+      {/* Kind words */}
+      <section className="px-6 pb-20 sm:pb-28">
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-primary px-8 py-14 sm:px-14">
+          <p className="inline-flex items-center gap-2 font-heading text-2xl text-primary-foreground">
+            <Sparkle className="h-4 w-4" /> Kind words
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-            {["Fable", "Northwind", "Cove", "Lumen", "Sable"].map((name) => (
-              <span
-                key={name}
-                className="font-heading text-2xl font-semibold text-muted-foreground/60"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
-            {testimonials.map((t) => (
-              <div key={t.name} className="text-center">
-                <p className="font-heading text-lg italic text-foreground">
-                  &ldquo;Iskra changed how we think about operations.&rdquo;
-                </p>
-                <p className="mt-3 text-sm font-medium text-foreground">
-                  {t.name}
-                </p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
-              </div>
-            ))}
-          </div>
+          <blockquote className="mt-6 font-heading text-3xl leading-snug text-primary-foreground sm:text-4xl">
+            &ldquo;Iskra completely transformed how we operate. The process was
+            seamless, collaborative, and genuinely lovely.&rdquo;
+          </blockquote>
+          <p className="mt-6 text-sm text-primary-foreground/80">
+            Sarah Watson — Founder, Wildflower Wellness
+          </p>
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="px-6 py-20 sm:py-28">
+      <section id="faq" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-3xl">
-          <div className="mb-12 text-center">
-            <h2 className="font-heading text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Frequently asked questions
+          <div className="mb-10 text-center">
+            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+              Frequently asked{" "}
+              <em className="italic text-primary">questions</em>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Everything you need to know about getting started with Iskra Exchange.
-            </p>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="font-heading text-lg font-semibold text-foreground hover:no-underline">
+                <AccordionTrigger className="font-heading text-lg text-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-base leading-relaxed text-muted-foreground">
@@ -448,39 +548,40 @@ function Index() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-6 py-24 sm:py-32">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-primary px-8 py-16 text-center sm:px-16 sm:py-24">
-          <h2 className="font-heading text-4xl font-semibold tracking-tight text-primary-foreground sm:text-5xl">
-            Ready to simplify your stack?
+      <section id="contact" className="px-6 pb-24">
+        <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-border bg-card px-8 py-16 text-center shadow-lg sm:px-16">
+          <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+            Let&apos;s create something{" "}
+            <em className="italic text-primary">beautiful</em> together
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/80">
-            Join teams that use Iskra Exchange to run cleaner operations and
-            deliver better outcomes.
+          <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+            Have a project in mind, or just want to say hello? We&apos;d love to
+            hear from you.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-background px-8 py-4 text-base font-semibold text-foreground shadow-md transition-all hover:bg-background/90"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
             >
-              Start free trial
-              <ArrowRight className="h-5 w-5" />
+              Get in touch
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:bg-primary-foreground/10"
+              href="#pricing"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-base font-medium text-foreground transition-all hover:bg-secondary"
             >
-              Talk to sales
+              View pricing
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border px-6 py-12">
+      <footer className="border-t border-border px-6 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-primary" />
-            <span className="font-heading text-xl font-semibold text-foreground">
+            <span className="font-heading text-xl text-foreground">
               Iskra Exchange
             </span>
           </div>
