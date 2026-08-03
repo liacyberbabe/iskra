@@ -513,7 +513,10 @@ function Index() {
           <p className="inline-flex items-center gap-2 font-heading text-2xl text-primary-foreground">
             <Sparkle className="h-4 w-4" /> Kind words
           </p>
-          <blockquote className="mt-6 font-heading text-3xl leading-snug text-primary-foreground sm:text-4xl">
+          <blockquote
+            className="mt-6 text-3xl leading-snug text-primary-foreground sm:text-4xl"
+            style={{ fontFamily: "'Cormorant', serif", fontStyle: "italic" }}
+          >
             &ldquo;Iskra completely transformed how we operate. The process was
             seamless, collaborative, and genuinely lovely.&rdquo;
           </blockquote>
