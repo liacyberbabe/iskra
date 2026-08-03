@@ -303,18 +303,18 @@ function Index() {
               loading="eager"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/20 to-background/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/30 to-background/50" />
 
             <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
-              <div className="max-w-sm rounded-[1.75rem] border border-border/40 bg-background/25 p-6 shadow-2xl backdrop-blur-2xl">
-                <p className="font-heading text-xl text-foreground">
+              <div className="max-w-sm rounded-[1.75rem] border border-border/70 bg-background/45 p-7 shadow-2xl shadow-background/20 backdrop-blur-3xl">
+                <p className="font-heading text-xl text-foreground drop-shadow-sm">
                   Explore our services
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {services.map((service) => (
                     <span
                       key={service}
-                      className="rounded-full bg-secondary/80 px-3.5 py-1.5 text-sm text-secondary-foreground backdrop-blur-sm"
+                      className="rounded-full border border-border/40 bg-secondary/90 px-3.5 py-1.5 text-sm text-secondary-foreground shadow-sm backdrop-blur-md"
                     >
                       {service}
                     </span>
