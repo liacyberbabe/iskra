@@ -261,7 +261,7 @@ function Index() {
               <Sparkle className="h-3.5 w-3.5 text-primary" />
               Now welcoming teams of every size
             </div>
-            <h1 className="mt-7 font-heading text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mt-7 font-heading font-bold text-5xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Software that feels{" "}
               <em className="italic font-medium text-primary">beautiful</em>{" "}
               and works{" "}
@@ -308,7 +308,7 @@ function Index() {
               className="relative aspect-4/3 w-full rounded-[2.5rem] object-cover shadow-2xl shadow-primary/20"
             />
             <div className="relative -mt-16 ml-4 mr-4 rounded-[1.75rem] border border-border/70 bg-card/80 p-5 shadow-xl backdrop-blur-xl sm:ml-8 sm:mr-10">
-              <p className="font-heading text-xl text-foreground">
+              <p className="font-heading font-bold text-xl text-foreground">
                 Explore our services
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -335,7 +335,7 @@ function Index() {
           {featuredIn.map((name) => (
             <span
               key={name}
-              className="font-heading text-lg text-foreground/70"
+              className="font-heading font-bold text-lg text-foreground/70"
             >
               {name}
             </span>
@@ -351,7 +351,7 @@ function Index() {
               key={stat.label}
               className="rounded-[2rem] border border-border bg-card p-8 text-center shadow-sm"
             >
-              <p className="font-heading text-5xl text-primary sm:text-6xl">
+              <p className="font-heading font-bold text-5xl text-primary sm:text-6xl">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm uppercase tracking-widest text-muted-foreground">
@@ -369,7 +369,7 @@ function Index() {
             <p className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-primary">
               <Sparkle className="h-3.5 w-3.5" /> How we help
             </p>
-            <h2 className="mt-4 font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+            <h2 className="mt-4 font-heading font-bold text-4xl tracking-tight text-foreground sm:text-5xl">
               Everything you need,{" "}
               <em className="italic text-primary">nothing you don&apos;t</em>
             </h2>
@@ -384,7 +384,7 @@ function Index() {
                 <div className="inline-flex rounded-2xl bg-secondary p-3">
                   <feature.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="mt-6 font-heading text-2xl text-foreground">
+                <h3 className="mt-6 font-heading font-bold text-2xl text-foreground">
                   {feature.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -399,16 +399,16 @@ function Index() {
       {/* Process */}
       <section id="process" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-7xl rounded-[2.5rem] bg-secondary/60 px-6 py-14 sm:px-12">
-          <h2 className="text-center font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+          <h2 className="text-center font-heading font-bold text-4xl tracking-tight text-foreground sm:text-5xl">
             The process
           </h2>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((item) => (
               <div key={item.step} className="text-center">
-                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-primary/40 bg-background font-heading text-lg text-primary">
+                <span className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-primary/40 bg-background font-heading font-bold text-lg text-primary">
                   {item.step}
                 </span>
-                <h3 className="mt-5 font-heading text-2xl text-foreground">
+                <h3 className="mt-5 font-heading font-bold text-2xl text-foreground">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -424,7 +424,7 @@ function Index() {
       <section id="pricing" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+            <h2 className="font-heading font-bold text-4xl tracking-tight text-foreground sm:text-5xl">
               Simple,{" "}
               <em className="italic text-primary">transparent</em> pricing
             </h2>
@@ -448,9 +448,9 @@ function Index() {
                     Most popular
                   </span>
                 )}
-                <h3 className="font-heading text-2xl">{plan.name}</h3>
+                <h3 className="font-heading font-bold text-2xl">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className="font-heading text-5xl">{plan.price}</span>
+                  <span className="font-heading font-bold text-5xl">{plan.price}</span>
                   <span
                     className={`text-lg ${
                       plan.featured
@@ -510,10 +510,10 @@ function Index() {
       {/* Kind words */}
       <section className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-primary px-8 py-14 sm:px-14">
-          <p className="inline-flex items-center gap-2 font-heading text-2xl text-primary-foreground">
+          <p className="inline-flex items-center gap-2 font-heading font-bold text-2xl text-primary-foreground">
             <Sparkle className="h-4 w-4" /> Kind words
           </p>
-          <blockquote className="mt-6 font-heading text-3xl leading-snug text-primary-foreground sm:text-4xl">
+          <blockquote className="mt-6 font-heading font-bold text-3xl leading-snug text-primary-foreground sm:text-4xl">
             &ldquo;Iskra completely transformed how we operate. The process was
             seamless, collaborative, and genuinely lovely.&rdquo;
           </blockquote>
@@ -527,7 +527,7 @@ function Index() {
       <section id="faq" className="px-6 pb-20 sm:pb-28">
         <div className="mx-auto max-w-3xl">
           <div className="mb-10 text-center">
-            <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+            <h2 className="font-heading font-bold text-4xl tracking-tight text-foreground sm:text-5xl">
               Frequently asked{" "}
               <em className="italic text-primary">questions</em>
             </h2>
@@ -535,7 +535,7 @@ function Index() {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="font-heading text-lg text-foreground hover:no-underline">
+                <AccordionTrigger className="font-heading font-bold text-lg text-foreground hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-base leading-relaxed text-muted-foreground">
@@ -550,7 +550,7 @@ function Index() {
       {/* Final CTA */}
       <section id="contact" className="px-6 pb-24">
         <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-border bg-card px-8 py-16 text-center shadow-lg sm:px-16">
-          <h2 className="font-heading text-4xl tracking-tight text-foreground sm:text-5xl">
+          <h2 className="font-heading font-bold text-4xl tracking-tight text-foreground sm:text-5xl">
             Let&apos;s create something{" "}
             <em className="italic text-primary">beautiful</em> together
           </h2>
@@ -581,7 +581,7 @@ function Index() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-primary" />
-            <span className="font-heading text-xl text-foreground">
+            <span className="font-heading font-bold text-xl text-foreground">
               Iskra Exchange
             </span>
           </div>
