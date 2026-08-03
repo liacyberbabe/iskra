@@ -20,7 +20,11 @@
 
 @theme inline {
   --font-sans: "Karla", sans-serif;
-  --font-heading: "Ramabhadra", sans-serif;
+  --font-heading: "Cormorant", "Times New Roman", serif;
+  --color-iris: var(--iris);
+  --color-ice: var(--ice);
+  --color-blush: var(--blush);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
