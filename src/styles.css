@@ -117,6 +117,9 @@
 
 .dark {
   --background: oklch(0.259 0.024 10.0);
+  --iris: oklch(0.700 0.080 295);
+  --ice: oklch(0.760 0.050 235);
+  --blush: oklch(0.780 0.055 15);
   --foreground: oklch(0.976 0.008 61.5);
   --card: oklch(0.320 0.030 12.0);
   --card-foreground: oklch(0.976 0.008 61.5);
@@ -173,6 +176,8 @@
   h5,
   h6 {
     font-family: var(--font-heading);
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
 }
 
