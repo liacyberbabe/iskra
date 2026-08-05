@@ -167,6 +167,9 @@ function TermsPage() {
             <Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground">
               Terms
             </Link>
+            <Link to="/cookie-policy" className="text-sm text-muted-foreground hover:text-foreground">
+              Cookies
+            </Link>
             <a href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
               Contact
             </a>
