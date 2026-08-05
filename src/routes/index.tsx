@@ -605,6 +605,12 @@ function Index() {
             >
               Terms
             </Link>
+            <Link
+              to="/cookie-policy"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Cookies
+            </Link>
             <a
               href="#contact"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
