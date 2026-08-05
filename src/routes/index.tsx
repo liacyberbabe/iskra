@@ -593,15 +593,24 @@ function Index() {
             © {new Date().getFullYear()} Iskra Exchange. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {["Privacy", "Terms", "Contact"].map((label) => (
-              <a
-                key={label}
-                href={`#${label.toLowerCase()}`}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {label}
-              </a>
-            ))}
+            <Link
+              to="/privacy"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Privacy
+            </Link>
+            <Link
+              to="/terms"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Terms
+            </Link>
+            <a
+              href="#contact"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </footer>
