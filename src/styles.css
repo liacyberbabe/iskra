@@ -20,7 +20,7 @@
 
 @theme inline {
   --font-sans: "Karla", sans-serif;
-  --font-heading: "DM Sans", "Questrial", sans-serif;
+  --font-heading: "playfair display", sans-serif;
   --color-iris: var(--iris);
   --color-ice: var(--ice);
   --color-blush: var(--blush);
