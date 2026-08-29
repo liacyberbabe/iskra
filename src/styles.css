@@ -19,7 +19,7 @@
  */
 
 @theme inline {
-  --font-sans: "Karla", sans-serif;
+  --font-sans: "Playfair Display", sans-serif;
   --font-heading: "playfair display", sans-serif;
   --color-iris: var(--iris);
   --color-ice: var(--ice);
@@ -178,7 +178,7 @@
     font-family: var(--font-heading);
     font-weight: 300;
     text-transform: lowercase;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.3em;
   }
 }
 
